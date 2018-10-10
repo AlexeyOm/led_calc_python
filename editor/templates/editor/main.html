@@ -1,0 +1,9 @@
+{% extends 'editor/base.html' %}
+
+{% block content %}
+    {% for vendor in vendors %}
+        <div>
+            <a href="{% url 'cabinets' vendor.pk %}">{{ vendor.brand }}</a>
+        </div>
+    {% endfor %}
+{% endblock %}

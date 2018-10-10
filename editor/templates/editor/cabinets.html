@@ -1,0 +1,12 @@
+{% extends 'editor/base.html' %}
+
+{% block content %}
+	{% for cabinet in cabinets %}
+        <div>
+            <a href="{% url 'cabinet_editor' cabinet.pk %}">{{ cabinet.model }}</a>
+        </div>
+	{% endfor %}
+	<div>
+		 <a href="{% url 'cabinet_add' %}">Добавить кабинет</a>
+	</div>
+{% endblock %}
